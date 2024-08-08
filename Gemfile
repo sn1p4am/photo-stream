@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "~> 3.1.2"
+ruby "3.3.4"
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
@@ -23,6 +23,7 @@ group :jekyll_plugins do
   gem "jekyll-tidy"
   gem 'jekyll-dotenv'
   gem "htmlbeautifier", "<1.4.0"
+  gem "ffi", "~> 1.17.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -33,4 +34,4 @@ install_if -> { RUBY_PLATFORM =~ %r!mingw|mswin|java! } do
 end
 
 # Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
+gem "wdm", "~> 0.2.0", :install_if => Gem.win_platform?
